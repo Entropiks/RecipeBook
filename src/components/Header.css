@@ -1,0 +1,22 @@
+.header {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  background-color: rgb(127, 127, 127);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button, .logout {
+  background-color: transparent;
+  margin-right: 25px;
+  border: 1px solid white;
+  color: white;
+  height: 30px;
+  width: 75px;
+  border-radius: 3px;
+}
+
+.title {
+  margin-left: 25px;
+}
