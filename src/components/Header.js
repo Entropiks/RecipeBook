@@ -6,7 +6,7 @@ import '../components/Header.css'
 function Header() {
   const history = useHistory();
 
-  // Handling user logout
+  // Handling user logout from auth.js
   const logoutUser = async () => {
     await logout();
     history.push('/signup');
