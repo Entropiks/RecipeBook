@@ -12,7 +12,7 @@ function SignUp(props) {
     //Create some state
     const [isLoading, setLoading] = useState(false);
 
-    // Do something with data when form is submitted
+    // Do something with data when form is submitted - something being handle the user
     const onSubmit = async (data) => {
       // Grabbing created user
       let newUser;
