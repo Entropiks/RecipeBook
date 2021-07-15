@@ -1,11 +1,10 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { signup } from '../firebase/auth';
 import { Link } from 'react-router-dom';
+import { login } from '../firebase/auth';
 import { useState } from 'react';
-import './Signup.css';
 
-function SignUp(props) {
+function Login(props) {
 
     //Invoke useForm hook with these methods to use
     const { register, handleSubmit, reset } = useForm();
@@ -16,17 +15,17 @@ function SignUp(props) {
     // Do something with data when form is submitted - something being handle the user
     const onSubmit = async (data) => {
       // Grabbing created user
-      let newUser;
+      let user;
       setLoading(true);
       try {
-        newUser = await signup(data);
+        user = await login(data);
         reset();
       } catch(error) {
         console.log(error);
       }
 
-      if (newUser) {
-        props.history.push(`/profile/${newUser.uid}`);
+      if (user) {
+        props.history.push(`/profile/${user.uid}`);
       } else {
         setLoading(false);
       }
@@ -40,22 +39,8 @@ function SignUp(props) {
             <div className="form-wrapper">
               
               <div className="form-content">
-                <h2>Signup Form</h2> 
+                <h2>Login Form</h2> 
                 <form className={formClassname} onSubmit={handleSubmit(onSubmit)}>
-                  <label>
-                    First Name:
-                    <input 
-                      type="text" 
-                      name="firstName"
-                      {...register('firstName')} />   
-                    </label>
-                  <label>
-                    Last Name:
-                    <input 
-                      type="text" 
-                      name="lastName" 
-                      {...register('lastName')} />
-                  </label>
                   <label>
                     Email:
                     <input 
@@ -70,20 +55,17 @@ function SignUp(props) {
                       name="password" 
                       {...register('password')} />
                   </label>
-                  <input 
-                    type="submit" 
-                    value="Signup" 
-                    className="submit"/>
-                  <div class="login_wrapper">
-                <button className="login_button">
-                  Login
-                </button>
-                <Link to="/login">Login</Link>
-                </div>
+                  <div className="login_wrapper">
+                  <button className="login_button">
+                    Login
+                  </button>
+                  <Link to="/signup">Sign Up</Link>
+                  </div>
+                  
                 </form>
               </div>
             </div>
     )
 }
 
-export default SignUp
+export default Login
