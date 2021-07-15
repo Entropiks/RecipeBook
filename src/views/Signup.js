@@ -32,7 +32,7 @@ function SignUp(props) {
     }
       
 
-    // This is getting the form class name and saying if isLoading, add class 'loading' or else empty to act as a toggle
+    // This is getting the form class name and saying if isLoading, add class 'loading' or else empty to act as a toggle.
     const formClassname = `form-signup form ${isLoading ? 'loading' : ''}`;
 
     return (
