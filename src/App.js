@@ -4,9 +4,9 @@ import Signup from './views/Signup'
 import Profile from './views/Profile'
 import Header from './components/Header';
 import Login from './views/Login';
-import ProfileRedirect from './router/ProfileRedirect';
+// import ProfileRedirect from './router/ProfileRedirect';
 
-import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom'
+import { Route, Switch, BrowserRouter } from 'react-router-dom'
 
 import { UserProvider } from './firebase/UserProvider';
 
@@ -16,12 +16,9 @@ function App() {
       <BrowserRouter>
       <Header />
         <Switch>
-          <ProfileRedirect exact path="/signup" component={Signup} />
+          <Route exact path="/signup" component={Signup} />
           <Route exact path="/profile/:id" component={Profile} />
-          <ProfileRedirect exact path="/login" component={Login} />
-          <Route exact path="/">
-            <Redirect to="/"/>
-          </Route>
+          <Route exact path="/login" component={Login} />
         </Switch>
       </BrowserRouter>
     </UserProvider>

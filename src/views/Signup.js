@@ -74,10 +74,7 @@ function SignUp(props) {
                     type="submit" 
                     value="Signup" 
                     className="submit"/>
-                  <div class="login_wrapper">
-                <button className="login_button">
-                  Login
-                </button>
+                  <div className="login_wrapper">
                 <Link to="/login">Login</Link>
                 </div>
                 </form>
