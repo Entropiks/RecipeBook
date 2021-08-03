@@ -5,12 +5,13 @@ function Home() {
   return (
     <div className="home-wrapper">
       <h1>Welcome to FILMR</h1>
-      <p>A place where you can find a filmer or be the filmer</p>
-      <button>Login</button>
+      <p>A place where you can find a filmer or be a filmer and get paid</p>
       <button>
-       <Link to="/signup">Sign Up</Link>
+        <Link to="/login">Login</Link>
       </button>
-     
+      <button >
+        <Link to="/signup">Sign Up</Link>
+      </button>
     </div>
   )
 }

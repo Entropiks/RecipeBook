@@ -1,6 +1,6 @@
 import React from 'react'
 import { logout } from '../firebase/auth'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import { useSession } from '../firebase/UserProvider'
 import '../components/Header.css'
 
@@ -17,7 +17,10 @@ function Header() {
   return (
     <div className="header">
       <h2 className="title">RecipeBook</h2>
+      {/* If  the user existing is true, lets show the logout button in the header */}
       {!! user && <button className="button logout" onClick={logoutUser}>Logout</button>}
+      {/* If the user does not exist, make sure to show the signup link */}
+      {! user && <Link to="/signup"><button className="button signup">Sign Up</button></Link>}
     </div>
   )
 }

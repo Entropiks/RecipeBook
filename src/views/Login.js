@@ -31,13 +31,11 @@ function Login(props) {
       }
     }
       
-
     // This is getting the form class name and saying if isLoading, add class 'loading' or else empty to act as a toggle.?
     const formClassname = `form-signup form ${isLoading ? 'loading' : ''}`;
 
     return (
             <div className="form-wrapper">
-              
               <div className="form-content">
                 <h2>Login Form</h2> 
                 <form className={formClassname} onSubmit={handleSubmit(onSubmit)}>
@@ -61,7 +59,6 @@ function Login(props) {
                   </button>
                   <Link to="/signup">Sign Up</Link>
                   </div>
-                  
                 </form>
               </div>
             </div>

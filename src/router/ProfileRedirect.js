@@ -3,13 +3,10 @@ import { Route, Redirect } from 'react-router-dom'
 import { useSession } from '../firebase/UserProvider'
 import firebase from 'firebase'
 
-// console.log({user});
 const user = firebase.auth().currentUser;
-console.log(user.uid);
 
 const ProfileRedirect = ({ component: Component, ...rest }) => {
-  const { user } = useSession;
-  // console.log({user});
+  const { user } = useSession();
 
 return (
   <Route 
