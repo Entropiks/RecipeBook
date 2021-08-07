@@ -16,7 +16,7 @@ function Header() {
 
   return (
     <div className="header">
-      <h2 className="title">RecipeBook</h2>
+      <Link to="/"><h2 className="title">FLMR</h2></Link>
       {/* If  the user existing is true, lets show the logout button in the header */}
       {!! user && <button className="button logout" onClick={logoutUser}>Logout</button>}
       {/* If the user does not exist, make sure to show the signup link */}
