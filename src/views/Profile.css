@@ -1,0 +1,5 @@
+.profile_wrapper {
+  margin: 0px 25px;
+  padding-top: 75px; /* This is top nav offset - probably should change this */
+  display: grid;
+}

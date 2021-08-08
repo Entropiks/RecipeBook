@@ -1,18 +1,19 @@
 .header {
-  position: absolute;
   display: flex;
+  position: absolute;
   width: 100%;
   z-index: 5;
   background-color: rgb(255, 255, 255);
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid lightgrey;
 }
 
 .button, .logout {
   background-color: transparent;
   margin-right: 25px;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid #bdbdbd;
+  color: black;
   height: 30px;
   width: 75px;
   border-radius: 3px;

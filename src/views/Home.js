@@ -8,7 +8,6 @@ function Home() {
       <div className="home-intro">
       <h1>Welcome to FILMR</h1>
       <p>A place where you can find a filmer or be a filmer and get paid</p>
-      </div>
       <div className="button-wrapper">
         <button>
           <Link to="/login">Login</Link>
@@ -17,6 +16,8 @@ function Home() {
           <Link to="/signup">Sign Up</Link>
         </button>
       </div>
+      </div>
+      
     </div>
   )
 }

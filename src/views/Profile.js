@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSession } from '../firebase/UserProvider';
+import './Profile.css';
 
 const Profile = () => {
   const { user } = useSession();
@@ -9,7 +10,7 @@ const Profile = () => {
   }
 
   return (
-    <div>
+    <div className="profile_wrapper">
       <p>Name : {user.displayName}</p>
       <p>Email: {user.email}</p>
       <p>ID: {user.uid}</p>
